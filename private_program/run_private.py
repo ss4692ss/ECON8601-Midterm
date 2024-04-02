@@ -16,6 +16,9 @@ from sklearn.naive_bayes import MultinomialNB
 
 import dill as pickle
 
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+
 
 
 
@@ -62,5 +65,44 @@ with open("text_analysis_machine.pickle", "wb") as f:
 
 
 
+X_train, X_test, y_train, y_test = train_test_split(data_transformed, review["stars"], test_size=0.2, random_state=42)
+
+
+machine.fit(X_train, y_train)
+
+
+predicted_labels = machine.predict(X_test)
+
+
+accuracy = accuracy_score(y_test, predicted_labels)
+print("Accuracy Score:", accuracy)
+
+
+import kfold_template
+
+from sklearn import tree
+from sklearn.ensemble import RandomForestClassifier
+
+
+machine = RandomForestClassifier(criterion="gini", max_depth=2, n_estimators=100, bootstrap = True) 
+return_values = kfold_template.run_kfold(machine, data_transformed, review["stars"], 4, False)
+print(return_values)
+
+
+
+import kfold_template
+from sklearn import linear_model
+from sklearn import metrics
+
+X_train, X_test, y_train, y_test = train_test_split(data_transformed, review["stars"], test_size=0.2, random_state=42)
+
+machine = linear_model.LogisticRegression()
+machine.fit(X_train, y_train)
+  
+prediction = machine.predict(X_test)
+  
+accuracy_score = metrics.accuracy_score(y_test, prediction)
+print("Accuracy score: ", accuracy_score)
+  
 
 
