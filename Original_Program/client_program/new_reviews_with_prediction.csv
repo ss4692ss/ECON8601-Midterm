@@ -1,4 +1,4 @@
-text, reviewtext,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,prediction,prediction_prob_1,prediction_prob_3,prediction_prob_5
+text, reviewtext,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,prediction,prediction_prob_1,prediction_prob_2,prediction_prob_3
 1," ""Laura's lack of commitment and poor system management skills led to a deteriorating infrastructure and numerous unresolved issues.""",,,,,1,0.8267,0.0822,0.0911
 2," ""Gary's work is filled with so many glitches, it's like he's actively trying to sabotage your project. It's utterly infuriating trying to find and fix all the issues he creates!""",,,,,1,0.5392,0.1772,0.2836
 3," ""Working with Nick is like being trapped in a never-ending nightmare. His code is so bad that it haunts my dreams! I wake up in a cold sweat  screaming at the thought of dealing with his mess again.""",,,,,1,0.6724,0.1079,0.2196

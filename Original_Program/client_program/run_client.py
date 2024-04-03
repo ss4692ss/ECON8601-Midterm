@@ -32,8 +32,8 @@ prediction_prob_dataframe = pandas.DataFrame(prediction_prob)
 
 prediction_prob_dataframe = prediction_prob_dataframe.rename(columns={
   prediction_prob_dataframe.columns[0]: "prediction_prob_1",
-  prediction_prob_dataframe.columns[1]: "prediction_prob_3",
-  prediction_prob_dataframe.columns[2]: "prediction_prob_5"
+  prediction_prob_dataframe.columns[1]: "prediction_prob_2",
+  prediction_prob_dataframe.columns[2]: "prediction_prob_3"
   })
 
 new_reviews = pandas.concat([new_reviews,prediction_prob_dataframe], axis=1)
@@ -47,8 +47,8 @@ new_reviews = new_reviews.rename(columns={
 
 new_reviews['prediction'] = new_reviews['prediction'].astype(int)
 new_reviews['prediction_prob_1'] = round(new_reviews['prediction_prob_1'],4)
+new_reviews['prediction_prob_2'] = round(new_reviews['prediction_prob_2'],4)
 new_reviews['prediction_prob_3'] = round(new_reviews['prediction_prob_3'],4)
-new_reviews['prediction_prob_5'] = round(new_reviews['prediction_prob_5'],4)
 
 
 new_reviews.to_csv("new_reviews_with_prediction.csv", index=False)
