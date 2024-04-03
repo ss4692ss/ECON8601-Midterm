@@ -18,7 +18,7 @@ from sklearn import linear_model
 from sklearn import metrics
 
 
-review = pd.read_csv("dataset.csv")
+review = pd.read_csv("/Users/sanjeevsharma/Desktop/Midterm861/dataset.csv")
 data = review["reviewtext"]
 target = review["stars"]
 lemmatizer = WordNetLemmatizer()
